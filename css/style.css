@@ -212,7 +212,7 @@ body {
 }
 
 .swipe-button-back {
-  background-image: url("/img/arrows/back.png") !important;
+  background-image: url("img/arrows/back.png") !important;
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
@@ -222,7 +222,7 @@ body {
 }
 
 .swipe-button-next {
-  background-image: url("/img/arrows/next.png") !important;
+  background-image: url("img/arrows/next.png") !important;
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
