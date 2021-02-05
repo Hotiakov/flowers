@@ -334,7 +334,7 @@ body {
   content: "";
   width: 10px;
   height: 4px;
-  background: url("/img/arrows/carret.svg") no-repeat;
+  background: url("../img/arrows/carret.svg") no-repeat;
   margin-left: 14px;
   vertical-align: middle;
 }
