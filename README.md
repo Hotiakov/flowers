@@ -1,11 +1,11 @@
 # flowers - учебный проект
 
-###Выполнил проект: Хотяков Евгений
+### Выполнил проект: Хотяков Евгений
 
-##технологии
-  -HTML
-  -CSS
-  -Bootstrap
-  -jQuery
-  -Fancybox
-  -Swiper Slider Js
+## технологии
+  - HTML
+  - CSS
+  - Bootstrap
+  - jQuery
+  - Fancybox
+  - Swiper Slider Js
