@@ -711,6 +711,7 @@
             justify-content: space-between;
             align-items: center;
             padding-top: 16px;
+
         }
 
         .quiz-story_top,
@@ -740,9 +741,8 @@
             width: 100%;
             display: flex;
             justify-content: center;
-            position: absolute;
-            bottom: 8px;
-            left: 0;
+            z-index: 111; /*Добавлено*/
+            box-shadow: 2px -3px 20px white; /*Добавлено*/
         }
         .arrow-block.hidden{
             display: none;
@@ -773,7 +773,7 @@
                 transform: rotate(180deg);
             }
         }
-        @keyframes backrotate { /*Добавлено*/
+        @keyframes backrotate {
             0% {
                 transform: rotate(180deg);
             }
@@ -783,22 +783,24 @@
         }
 
         .story-text_wrapper {
+            display: flex;/*Добавлено*/
             position: absolute;
             width: 100%;
-            height: 24vh;
-            background: url('text-bg.png') center no-repeat; /*Добавлено*/
-            background-size: 100% 100%; /*Добавлено*/
+            flex-direction: column;/*Добавлено*/
+            max-height: 23vh;/*Изменено с height на max-height для анимации*/
             top: 0;
             left: 0;
             overflow: hidden; /*Добавлено*/
             padding: 0 40px 40px 40px;
             z-index: 110; /*Добавлено*/
-            transition: height 1s ease-in-out;
+            background: url('text-bg.png') center no-repeat; /*Добавлено*/
+            background-size: 100% 100%; /*Добавлено*/
+            transition: all 0.5s ease-in-out;/*Добавлено*/
         }   
         /* Плавная анимация dropdown  */
         .story-text_wrapper.active {
-            height: auto;
-            transition: height 1s ease-in-out;
+            max-height: 100vh;/*Добавлено*/
+            transition: all 1s ease-in-out;/*Добавлено*/
         }
         
         .story-text_wrapper.active .dropdown-arrow {
@@ -830,6 +832,7 @@
             overflow: hidden;
             z-index: 110;
         }
+
 
         .next-btn {
             width: 330px;
@@ -1146,7 +1149,8 @@
     let text = document.querySelector(".quiz-story_text");
     let arrow = document.querySelector(".arrow-block");
 
-    let h_wrapper = text.clientHeight;
+    // let h_wrapper = text.clientHeight;
+    let h_wrapper = wrapper.clientHeight;
     let h_text = text.scrollHeight;
     console.log(h_wrapper);
     console.log(h_text);
